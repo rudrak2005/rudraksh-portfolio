@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* ========================================
+   DESIGN TOKENS
+======================================== */
+
+:root {
+  --background: #08090B;
+  --surface: #111318;
+  --surface-hover: #151820;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #9A9CA3;
+
+  --border: #24262D;
+
+  --accent: #5B8CFF;
+  --accent-glow: #7C6CFF;
+}
+
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "Geist", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+/* ========================================
+   LINKS & BUTTONS
+======================================== */
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* ========================================
+   NAVBAR LINK
+======================================== */
+
+.nav-link {
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+
+  transition:
+    color 300ms ease,
+    opacity 300ms ease;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+/* Animated underline */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background: var(--accent);
+
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition: transform 300ms ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-width: 320px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+.social-link {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: color 300ms ease;
+}
+
+.social-link:hover {
+  color: var(--text-primary);
+}
