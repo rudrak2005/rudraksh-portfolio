@@ -166,6 +166,19 @@ export default function Navbar() {
                     </motion.a>
                   ))}
 
+                  <motion.a
+                    href="/Rudraksh_Kumar_Resume.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={closeMenu}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: links.length * 0.04 }}
+                    className="rounded-xl px-3 py-3 text-sm text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface)] hover:text-[var(--text-primary)]"
+                  >
+                    Resume
+                  </motion.a>
+
                   <a
                     href="mailto:rudrakk2005@gmail.com"
                     onClick={closeMenu}
