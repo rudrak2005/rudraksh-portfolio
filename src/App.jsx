@@ -13,31 +13,24 @@ import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 
 import ProjectDetails from "./pages/ProjectDetails";
-
 function Home() {
   return (
     <>
       <Navbar />
-
       <main>
         <Hero />
         <About />
         <Skills />
         <Projects />
-        <Hero />
-<About />
-<Skills />
-<Projects />
-<DSA />
-<Education />
-<GitHub />
-<Contact />
-<Footer />
+        <DSA />
+        <Education />
+        <GitHub />
+        <Contact />
+        <Footer />
       </main>
     </>
   );
 }
-
 function App() {
   return (
     <BrowserRouter>
