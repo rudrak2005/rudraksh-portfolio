@@ -59,6 +59,10 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+
+            <a href="/Rudraksh Kumar.pdf" target="_blank" rel="noreferrer" className="social-link">
+              Resume ↓
+            </a>
           </div>
 
           {/* Desktop Contact */}
