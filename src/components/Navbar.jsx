@@ -167,7 +167,7 @@ export default function Navbar() {
                   ))}
 
                   <motion.a
-                    href="/Rudraksh_Kumar_Resume.pdf"
+                    href="/Rudraksh Kumar.pdf"
                     target="_blank"
                     rel="noreferrer"
                     onClick={closeMenu}
