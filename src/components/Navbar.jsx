@@ -185,7 +185,7 @@ export default function Navbar() {
                     className="
                       mt-2
                       rounded-xl
-                      bg-[var(--text-primary)]
+                      bg-[var(--text-black)]
                       px-4
                       py-3
                       text-center
